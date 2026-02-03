@@ -99,12 +99,6 @@ Sampling_assignment/
 
     The script prints and saves a CSV file showing accuracy scores for each model on each sampling method.
 
-    | Model | Random | Systematic | Stratified | Bootstrap | CrossVal |
-    |------:|:------:|:----------:|:----------:|:---------:|:--------:|
-    | M1 | 85.23 | 65.10 | 88.45 | 81.65 | 87.12 |
-    | M2 | 90.12 | 70.98 | 92.45 | 85.34 | 91.80 |
-    | ... | ... | ... | ... | ... | ... |
-
 
 
     The best sampling method is also determined for each model based on highest accuracy.
