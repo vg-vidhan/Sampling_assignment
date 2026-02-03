@@ -1,4 +1,4 @@
-# 📊 Sampling Assignment — Credit Card Fraud Detection
+#  Sampling Assignment — Credit Card Fraud Detection
 
 This repository contains a Python implementation to explore how different **sampling techniques** affect the performance of various **machine learning classifiers** on an imbalanced credit card fraud dataset.
 
@@ -6,7 +6,7 @@ Imbalanced data is common in fraud detection problems. Without proper handling, 
 
 ---
 
-## 🔍 Repository Contents
+##  Repository Contents
 
 Sampling_assignment/
 │
@@ -20,7 +20,7 @@ Sampling_assignment/
 
 ---
 
-## 🧠 Project Goals
+##  Project Goals
 
 1. Handle class imbalance via undersampling  
 2. Implement multiple sampling techniques  
@@ -30,7 +30,7 @@ Sampling_assignment/
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 - File path: `data/Creditcard_data.csv`  
 - Target Column: `Class`
@@ -42,7 +42,7 @@ Sampling_assignment/
 
 ---
 
-## 🧪 Sampling Techniques Used
+##  Sampling Techniques Used
 
 | Technique | Description |
 |---------|-------------|
@@ -54,7 +54,7 @@ Sampling_assignment/
 
 ---
 
-## 🧠 Machine Learning Models
+##  Machine Learning Models
 
 | Code | Model |
 |-----|------|
@@ -66,7 +66,7 @@ Sampling_assignment/
 
 ---
 
-## 🚀 How It Works (Step-by-Step)
+##  How It Works (Step-by-Step)
 
 ---
 
@@ -95,7 +95,7 @@ Sampling_assignment/
     model.fit(Xtr, ytr)
     accuracy_score(yte, pred)
 
-🧾 Results
+ Results
 
     The script prints and saves a CSV file showing accuracy scores for each model on each sampling method.
 
@@ -103,5 +103,5 @@ Sampling_assignment/
 
     The best sampling method is also determined for each model based on highest accuracy.
 
-📁 Saved Output
-    results/accuracy_table.csv
+ Saved Output
+   - results/accuracy_table.csv
