@@ -72,40 +72,42 @@ Sampling_assignment/
 
 1️⃣ Load and Balance Dataset
 
-The script loads the CSV dataset, then uses undersampling to balance the number of fraud and non-fraud records.
+    The script loads the CSV dataset, then uses undersampling to balance the number of fraud and non-fraud records.
 
-df_bal = pd.concat([majority_down, minority])
+    df_bal = pd.concat([majority_down, minority])
 
 2️⃣ Apply Sampling Methods
 
-Each sampling method generates a new subset of the balanced dataset for model training.
+    Each sampling method generates a new subset of the balanced dataset for model training.
 
-Example — Random Sampling
+    Example — Random Sampling
 
-idx = np.random.choice(len(X), sample_size, replace=False)
-Xs = X.iloc[idx]
-ys = y.iloc[idx]
+    idx = np.random.choice(len(X), sample_size, replace=False)
+    Xs = X.iloc[idx]
+    ys = y.iloc[idx]
 
 3️⃣ Train Models and Evaluate
 
-Each sampled dataset is split into training and test sets (80/20).
+    Each sampled dataset is split into training and test sets (80/20).
 
-Models are trained on the training set and accuracy is recorded on the test set.
+    Models are trained on the training set and accuracy is recorded on the test set.
 
-model.fit(Xtr, ytr)
-accuracy_score(yte, pred)
+    model.fit(Xtr, ytr)
+    accuracy_score(yte, pred)
 
 🧾 Results
 
-The script prints and saves a CSV file showing accuracy scores for each model on each sampling method.
+    The script prints and saves a CSV file showing accuracy scores for each model on each sampling method.
 
-           Random  Systematic  Stratified  Bootstrap  CrossVal
-M1         85.23        65.10        88.45       81.65      87.12
-M2         90.12        70.98        92.45       85.34      91.80
-...
+    | Model | Random | Systematic | Stratified | Bootstrap | CrossVal |
+    |------:|:------:|:----------:|:----------:|:---------:|:--------:|
+    | M1 | 85.23 | 65.10 | 88.45 | 81.65 | 87.12 |
+    | M2 | 90.12 | 70.98 | 92.45 | 85.34 | 91.80 |
+    | ... | ... | ... | ... | ... | ... |
 
 
-The best sampling method is also determined for each model based on highest accuracy.
+
+    The best sampling method is also determined for each model based on highest accuracy.
 
 📁 Saved Output
-results/accuracy_table.csv
+    results/accuracy_table.csv
